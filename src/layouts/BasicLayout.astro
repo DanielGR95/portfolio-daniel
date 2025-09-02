@@ -13,30 +13,30 @@ const { title, description, page, pubDate } = Astro.props;
 const image =
   page === "travel"
     ? `${Astro.url.origin}/globe_preview.webp"`
-    : `${Astro.url.origin}/og-image.png`;
+    : `${Astro.url.origin}/main.png`;
 
 const schema =
   page !== "blog"
     ? {
         "@context": "http://schema.org",
         "@type": "Person",
-        name: "Gianmarco",
+        name: "Daniel",
         url: Astro.url.origin,
         sameAs: [LINKS.linkedin, LINKS.github],
         image: `${Astro.url.origin}/og-image.png`,
-        jobTitle: "Freelance Frontend Developer",
+        jobTitle: "Data Analyst",
         worksFor: {
           "@type": "Organization",
           name: "Self-Employed",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Italy",
-            addressCountry: "IT",
+            addressLocality: "Spain",
+            addressCountry: "ES",
           },
         },
         nationality: {
           "@type": "Country",
-          name: "Italy",
+          name: "Spain",
         },
       }
     : {
@@ -51,13 +51,13 @@ const schema =
         image: `${Astro.url.origin}/og-image.png`, //TODO: dynamic
         author: {
           "@type": "Person",
-          name: "Gianmarco",
+          name: "Daniel",
           url: Astro.url.origin,
           sameAs: [LINKS.linkedin, LINKS.github],
         },
         publisher: {
           "@type": "Organization",
-          name: "Gianmarco",
+          name: "Daniel",
           logo: {
             "@type": "ImageObject",
             url: `${Astro.url.origin}/og-image.png`,
@@ -75,7 +75,7 @@ const schema =
     <meta content="width=device-width" name="viewport" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <meta content={Astro.generator} name="generator" />
-    <title>{title}</title>
+    <title>Daniel García Riquelme</title>
     <meta content={description} name="description" />
     <meta content="index, follow" name="robots" />
     <!-- Basic OG tags for sharing your website's content on platforms like Facebook and LinkedIn -->
