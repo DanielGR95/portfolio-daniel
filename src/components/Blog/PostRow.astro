@@ -20,11 +20,5 @@ const { title, date, id } = Astro.props;
     <p class="inline-block whitespace-nowrap">
       {title}
     </p>
-    <time
-      class="text-right tabular-nums"
-      data-date={date.toISOString()}       datetime={date.toISOString()}
-    >
-      {formatDate(date)}
-    </time>
   </a>
 </li>
